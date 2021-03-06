@@ -336,16 +336,33 @@
     </a>
   </div>
 
+    <div>
+        <textarea placeholder="Digite aqui o texto que será criptografado" type="text" cols="100" rows="5" #texto></textarea>
+
+        <button (click)="getCripto(texto.value)">
+            Criptografar
+        </button>
+
+        <h2>Resultado: {{cripto.resultado}}</h2>
+
+    </div>
+
+    <div>
+        <textarea placeholder="Digite aqui o texto que será descriptografado" type="text" cols="100" rows="5" #texto2></textarea>
+
+        <button (click)="getDescripto(texto2.value)">
+            Descriptografar
+        </button>
+
+        <h2>Resultado: {{descripto.resultado}}</h2>
+
+    </div>
+    
+
   <div>
-    <label>Texto:
-      <input #texto />
-    </label>
-    <!-- (click) passes input value to add() and then clears the input -->
-    <button (click)="getCripto(texto.value); texto.value=''">
-      Cryptografar
-    </button>
-  </div>
-  
+</div>
+
+
 
 </div>
 

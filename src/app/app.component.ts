@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input, ViewChild, ElementRef } from '@angular/core';
 import { CryptService } from './crypt.service';
+
+import { Cripto } from './cripto';
 
 @Component({
   selector: 'app-root',
@@ -7,19 +9,24 @@ import { CryptService } from './crypt.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-    title = 'cripto';
+    @Input() cripto: Cripto;
+    @Input() descripto: Cripto;
 
     constructor(private cryptService: CryptService) {}
 
     getCripto(msg: string): void {
-        /*const msg = 'ABCDE';*/
-        const cripto = this.cryptService.getCrypt(msg).subscribe();
-        console.log(cripto);
+        this.cryptService.getCrypt(msg)
+            .subscribe(data => {
+                console.log(data);
+                this.cripto = data;
+         });
     }
 
     getDescripto(msg: string): void {
-        /*const msg = 'Gbqb'*/;
-        this.cryptService.getDecrypt(msg);
+        this.cryptService.getDecrypt(msg)
+            .subscribe(data => {
+                console.log(data);
+                this.descripto = data;
+         });
     }
-
 }
