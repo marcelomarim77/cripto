@@ -305,59 +305,36 @@
     alt="Angular Logo"
     src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
   />
-  <span>Criptografia</span>
+  <span>TRABALHO DE MATEMÁTICA - CRIPTOGRAFIA</span>
     <div class="spacer"></div>
 </div>
 
 <div class="content" role="main">
 
   <!-- Resources -->
-  <h1>7° B</h1>
-  <h2>Grupo</h2>
+  <h2>7° B</h2>
+  <h3>Grupo</h3>
   <p>Gabriel Ricarte Mendonça Evangelista</p>
   <p>Lara Molinari Batista</p>
   <p>Manoela Grisi Iaconelli</p>
   <p>Pedro Vitor Vasconcelos Baldasin Vila Marim</p>
 
   <div class="card-container">
-    <a class="card" target="_blank" rel="noopener" href="https://angular.io/tutorial">
+    <textarea placeholder="Digite aqui o texto que será criptografado ou descriptografado" type="text" cols="100"
+         rows="5" #texto></textarea>
+  </div>
+
+  <div class="card-container">
+    <a class="card" target="_blank" rel="noopener">
       <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
 
-      <span>Criptografar</span>
-
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>    </a>
-
-    <a class="card" target="_blank" rel="noopener" href="https://angular.io/cli">
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
-
-      <span>Descriptografar</span>
-
-      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      <button (click)="getCripto(texto.value)">
+        Executar
+      </button>
     </a>
   </div>
 
-    <div>
-        <textarea placeholder="Digite aqui o texto que será criptografado" type="text" cols="100" rows="5" #texto></textarea>
-
-        <button (click)="getCripto(texto.value)">
-            Criptografar
-        </button>
-
-        <h2>Resultado: {{cripto.resultado}}</h2>
-
-    </div>
-
-    <div>
-        <textarea placeholder="Digite aqui o texto que será descriptografado" type="text" cols="100" rows="5" #texto2></textarea>
-
-        <button (click)="getDescripto(texto2.value)">
-            Descriptografar
-        </button>
-
-        <h2>Resultado: {{descripto.resultado}}</h2>
-
-    </div>
-    
+  <h2 style="color:#00008B;">{{cripto.resultado}}</h2>
 
   <div>
 </div>
